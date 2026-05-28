@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kang Hyeon | Portfolio</title>
+    <meta
+      name="description"
+      content="Quant, data, and software projects portfolio."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Go to home">
+        <span class="brand-mark">KH</span>
+        <span>Kang Hyeon</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Quant Developer / Data Builder</p>
+          <h1>금융 데이터와 머신러닝으로 실행 가능한 트레이딩 시스템을 만듭니다.</h1>
+          <p class="hero-summary">
+            시장 데이터 수집, 피처 엔지니어링, 모델링, 백테스트, 자동화까지
+            이어지는 실험 중심의 프로젝트를 정리하는 공간입니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">프로젝트 보기</a>
+            <a class="button secondary" href="#contact">연락하기</a>
+          </div>
+        </div>
+
+        <div class="profile-panel" aria-label="Portfolio snapshot">
+          <div class="profile-visual">
+            <span>Quant</span>
+            <strong>ML</strong>
+            <span>Trading</span>
+          </div>
+          <dl class="quick-facts">
+            <div>
+              <dt>Focus</dt>
+              <dd>Market data, GBDT, backtesting</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>Python, pandas, scikit-learn, LightGBM</dd>
+            </div>
+            <div>
+              <dt>Now</dt>
+              <dd>SPY 5m signal research</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Projects</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-thumb market"></div>
+            <div class="project-body">
+              <h3>SPY 5m GBDT Trader</h3>
+              <p>
+                SPY 5분봉 데이터를 업데이트하고, GBDT 기반 시그널을 실험하는
+                트레이딩 리서치 프로젝트.
+              </p>
+              <ul class="tag-list" aria-label="Tech stack">
+                <li>Python</li>
+                <li>pandas</li>
+                <li>GBDT</li>
+                <li>Backtest</li>
+              </ul>
+              <a
+                href="../quant/spy-5m-gbdt-trader/README.md"
+                aria-label="Open SPY 5m GBDT Trader project"
+              >
+                Details
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb pipeline"></div>
+            <div class="project-body">
+              <h3>Market Data Pipeline</h3>
+              <p>
+                원천 데이터 다운로드, 정합성 체크, 파생 피처 생성, 저장까지
+                반복 가능한 데이터 파이프라인.
+              </p>
+              <ul class="tag-list" aria-label="Tech stack">
+                <li>ETL</li>
+                <li>Validation</li>
+                <li>Automation</li>
+              </ul>
+              <span class="muted-link">Details soon</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb dashboard"></div>
+            <div class="project-body">
+              <h3>Strategy Dashboard</h3>
+              <p>
+                모델 성능, 포지션, 손익, 리스크 지표를 한 화면에서 확인하는
+                운영용 대시보드 구상.
+              </p>
+              <ul class="tag-list" aria-label="Tech stack">
+                <li>Charts</li>
+                <li>Metrics</li>
+                <li>Monitoring</li>
+              </ul>
+              <span class="muted-link">Details soon</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section split-section">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>Research와 구현 사이를 빠르게 왕복합니다.</h2>
+        </div>
+        <div class="body-copy">
+          <p>
+            아이디어를 노트에만 두지 않고 데이터셋, 실험 코드, 검증 결과,
+            배포 가능한 도구로 옮기는 것을 좋아합니다. 특히 금융 시계열,
+            피처 엔지니어링, 모델 검증, 자동화된 업데이트 흐름에 관심이 있습니다.
+          </p>
+          <div class="skill-columns">
+            <div>
+              <h3>Core</h3>
+              <p>Python, data analysis, machine learning, backtesting</p>
+            </div>
+            <div>
+              <h3>Tools</h3>
+              <p>pandas, NumPy, scikit-learn, LightGBM, Git</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Timeline</p>
+          <h2>Experience</h2>
+        </div>
+        <ol class="timeline">
+          <li>
+            <span class="time">Now</span>
+            <div>
+              <h3>Quant research projects</h3>
+              <p>5분봉 데이터셋 업데이트, 모델 실험, 성능 분석 자동화.</p>
+            </div>
+          </li>
+          <li>
+            <span class="time">Next</span>
+            <div>
+              <h3>Portfolio case studies</h3>
+              <p>각 프로젝트의 문제 정의, 접근 방식, 결과를 상세 페이지로 정리.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>프로젝트와 실험을 더 자세히 이야기해보고 싶다면.</h2>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:your.email@example.com">Email</a>
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
