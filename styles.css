@@ -316,12 +316,6 @@ h3 {
     linear-gradient(135deg, #315c99, #0d766e 68%, #b58a2a);
 }
 
-.project-thumb.stock-auto-sell {
-  background:
-    repeating-linear-gradient(0deg, transparent 0 18px, rgba(255, 255, 255, 0.18) 18px 19px),
-    linear-gradient(135deg, #0d766e, #15191f 64%, #315c99);
-}
-
 .project-thumb.blackswan {
   background:
     radial-gradient(circle at 72% 32%, rgba(255, 255, 255, 0.3) 0 7%, transparent 8%),
