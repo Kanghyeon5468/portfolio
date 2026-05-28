@@ -310,12 +310,6 @@ h3 {
     linear-gradient(135deg, #243241, #0d766e 58%, #b58a2a);
 }
 
-.project-thumb.robokit {
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0 18%, transparent 18% 30%, rgba(255, 255, 255, 0.16) 30% 42%, transparent 42%),
-    linear-gradient(135deg, #15191f, #0d766e);
-}
-
 .project-thumb.ai-travel {
   background:
     radial-gradient(circle at 24% 24%, rgba(255, 255, 255, 0.48) 0 10%, transparent 11%),
