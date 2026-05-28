@@ -1,15 +1,24 @@
 # Portfolio Webpage
 
-개인 포트폴리오 웹사이트 초안입니다. 지금은 정적 HTML/CSS라서 브라우저에서 `index.html`을 바로 열어 확인할 수 있습니다.
+This is a first draft of a personal portfolio website. It is currently a static HTML/CSS site, so you can open `index.html` directly in a browser.
 
 ## Structure
 
-- `index.html`: 포트폴리오 섹션과 기본 콘텐츠
-- `styles.css`: 레이아웃, 색상, 반응형 스타일
+- `index.html`: Portfolio sections and core content
+- `styles.css`: Layout, colors, and responsive styles
 
 ## Next Steps
 
-- 이름, 이메일, GitHub, LinkedIn 링크를 실제 정보로 교체
-- 프로젝트별 GitHub 링크와 상세 페이지 추가
-- 프로필 사진이나 프로젝트 스크린샷 추가
-- 필요하면 Next.js/Vite 기반 프로젝트로 전환
+- Replace the placeholder name, email, GitHub, and LinkedIn links with real information
+- Add GitHub links and detail pages for each project
+- Add a profile photo or project screenshots
+- Convert the site to Next.js or Vite if the project grows
+
+## Custom Domain
+
+This site is configured for `kimmy.tech` with the `CNAME` file.
+
+For GitHub Pages, set the domain DNS records to:
+
+- `A` records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- `CNAME` record for `www`: `kanghyeon5468.github.io`

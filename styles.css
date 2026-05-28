@@ -266,22 +266,47 @@ h3 {
   border-bottom: 1px solid var(--line);
 }
 
-.project-thumb.market {
+.project-thumb.ml-trading {
   background:
-    linear-gradient(135deg, rgba(13, 118, 110, 0.8), rgba(181, 138, 42, 0.76)),
-    repeating-linear-gradient(0deg, transparent 0 20px, rgba(255, 255, 255, 0.2) 20px 21px);
+    repeating-linear-gradient(0deg, transparent 0 20px, rgba(255, 255, 255, 0.18) 20px 21px),
+    linear-gradient(135deg, rgba(21, 25, 31, 0.18) 1px, transparent 1px),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.28) 12%, transparent 12% 24%, rgba(255, 255, 255, 0.18) 24% 36%, transparent 36%),
+    linear-gradient(135deg, #0d766e, #315c99 58%, #b58a2a);
+  background-size: auto, 22px 22px, auto, auto;
 }
 
-.project-thumb.pipeline {
+.project-thumb.portfolio-optimisation {
   background:
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.7), transparent 24%),
-    linear-gradient(135deg, #315c99, #2d7f77);
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 12%, transparent 12% 22%, rgba(255, 255, 255, 0.22) 22% 32%, transparent 32%),
+    linear-gradient(135deg, #243241, #315c99 54%, #0d766e);
 }
 
-.project-thumb.dashboard {
+.project-thumb.game-of-life {
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.2) 12%, transparent 12% 22%, rgba(255, 255, 255, 0.22) 22% 32%, transparent 32%),
-    linear-gradient(135deg, #243241, #b58a2a);
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0 1px, transparent 1px 24px),
+    linear-gradient(135deg, #15191f, #315c99);
+}
+
+.project-thumb.hazard-detector {
+  background:
+    radial-gradient(circle at 26% 32%, rgba(255, 255, 255, 0.55) 0 8%, transparent 9%),
+    radial-gradient(circle at 68% 62%, rgba(255, 255, 255, 0.32) 0 12%, transparent 13%),
+    linear-gradient(135deg, #b58a2a, #0d766e 62%, #243241);
+}
+
+.project-thumb.daptive-vr {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.38) 0 18%, transparent 19%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.28) 0 14%, transparent 14% 34%, rgba(255, 255, 255, 0.18) 34% 48%, transparent 48%),
+    linear-gradient(135deg, #315c99, #0d766e 58%, #243241);
+}
+
+.project-thumb.robot-arm {
+  background:
+    radial-gradient(circle at 72% 26%, rgba(255, 255, 255, 0.62) 0 9%, transparent 10%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.28) 0 16%, transparent 16% 34%, rgba(255, 255, 255, 0.18) 34% 46%, transparent 46%),
+    linear-gradient(135deg, #243241, #0d766e 58%, #b58a2a);
 }
 
 .project-body {
