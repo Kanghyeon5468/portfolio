@@ -295,6 +295,7 @@ h3 {
     linear-gradient(135deg, #b58a2a, #0d766e 62%, #243241);
 }
 
+.project-thumb.adaptive-vr,
 .project-thumb.daptive-vr {
   background:
     radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.38) 0 18%, transparent 19%),
@@ -307,6 +308,38 @@ h3 {
     radial-gradient(circle at 72% 26%, rgba(255, 255, 255, 0.62) 0 9%, transparent 10%),
     linear-gradient(120deg, rgba(255, 255, 255, 0.28) 0 16%, transparent 16% 34%, rgba(255, 255, 255, 0.18) 34% 46%, transparent 46%),
     linear-gradient(135deg, #243241, #0d766e 58%, #b58a2a);
+}
+
+.project-thumb.robokit {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0 18%, transparent 18% 30%, rgba(255, 255, 255, 0.16) 30% 42%, transparent 42%),
+    linear-gradient(135deg, #15191f, #0d766e);
+}
+
+.project-thumb.ai-travel {
+  background:
+    radial-gradient(circle at 24% 24%, rgba(255, 255, 255, 0.48) 0 10%, transparent 11%),
+    linear-gradient(135deg, #315c99, #0d766e 68%, #b58a2a);
+}
+
+.project-thumb.stock-auto-sell {
+  background:
+    repeating-linear-gradient(0deg, transparent 0 18px, rgba(255, 255, 255, 0.18) 18px 19px),
+    linear-gradient(135deg, #0d766e, #15191f 64%, #315c99);
+}
+
+.project-thumb.blackswan {
+  background:
+    radial-gradient(circle at 72% 32%, rgba(255, 255, 255, 0.3) 0 7%, transparent 8%),
+    radial-gradient(circle at 30% 64%, rgba(181, 138, 42, 0.46) 0 13%, transparent 14%),
+    linear-gradient(135deg, #15191f, #243241 58%, #0d766e);
+}
+
+.project-thumb.ionq {
+  background:
+    radial-gradient(circle at 36% 42%, rgba(255, 255, 255, 0.46) 0 8%, transparent 9%),
+    radial-gradient(circle at 68% 32%, rgba(255, 255, 255, 0.3) 0 6%, transparent 7%),
+    linear-gradient(135deg, #315c99, #243241 58%, #0d766e);
 }
 
 .project-body {
