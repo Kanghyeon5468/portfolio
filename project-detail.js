@@ -40,6 +40,21 @@ const projects = {
         type: "image/png",
       },
     ],
+    content: [
+      {
+        type: "text",
+        text: "The model combines intraday equity and ETF signals with inflation and global FX features to capture both market microstructure and broader macro conditions.",
+      },
+      {
+        type: "image",
+        src: "./assets/projects/output.png",
+        alt: "Live trading vs buy and hold return chart",
+      },
+      {
+        type: "text",
+        text: "The plotted comparison uses the gathered dataset period and compares SPY buy-and-hold returns against the live-trading logic without trading fees.",
+      },
+    ],
   },
   "portfolio-optimisation": {
     title: "Real-time Portfolio Optimisation",
@@ -255,18 +270,18 @@ project.stack.forEach((text) => {
   stack.append(item);
 });
 
-const highlights = document.getElementById("project-highlights");
-project.highlights.forEach((text) => {
-  const item = document.createElement("li");
-  item.textContent = text;
-  highlights.append(item);
-});
+const projectContent = document.getElementById("project-content");
 
-const mediaGrid = document.getElementById("media-grid");
+function appendTextBlock(text) {
+  const paragraph = document.createElement("p");
+  paragraph.className = "content-text";
+  paragraph.textContent = text;
+  projectContent.append(paragraph);
+}
 
-function renderMediaItem(source, label, type = "") {
+function appendMediaBlock(source, label, type = "") {
   const card = document.createElement("figure");
-  card.className = "media-card";
+  card.className = "content-media";
 
   const isVideo = type.startsWith("video/") || /\.(mp4|mov|webm)$/i.test(source);
   const preview = isVideo ? document.createElement("video") : document.createElement("img");
@@ -278,22 +293,35 @@ function renderMediaItem(source, label, type = "") {
   }
 
   card.append(preview);
-  mediaGrid.append(card);
+  projectContent.append(card);
 }
 
-function renderProjectMedia() {
-  const media = project.media || [];
-  if (!media.length) {
-    const empty = document.createElement("p");
-    empty.className = "media-empty";
-    empty.textContent = "Media will be added soon.";
-    mediaGrid.append(empty);
+function renderProjectContent() {
+  const fallbackContent = [
+    ...(project.highlights || []).map((text) => ({ type: "text", text })),
+    ...(project.media || []).map((item) => ({
+      type: item.type?.startsWith("video/") ? "video" : "image",
+      src: item.src,
+      alt: item.label,
+      label: item.label,
+      mediaType: item.type,
+    })),
+  ];
+  const content = project.content || fallbackContent;
+
+  if (!content.length) {
+    appendTextBlock("More details will be added soon.");
     return;
   }
 
-  media.forEach((item) => {
-    renderMediaItem(item.src, item.label, item.type);
+  content.forEach((item) => {
+    if (item.type === "image" || item.type === "video") {
+      appendMediaBlock(item.src, item.alt || item.label || project.title, item.mediaType || item.type);
+      return;
+    }
+
+    appendTextBlock(item.text);
   });
 }
 
-renderProjectMedia();
+renderProjectContent();

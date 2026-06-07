@@ -6,7 +6,7 @@ This is a first draft of a personal portfolio website. It is currently a static 
 
 - `index.html`: Portfolio sections and core content
 - `project.html`: Shared project detail page
-- `project-detail.js`: Project detail data and permanent media references
+- `project-detail.js`: Project detail data and free-form page content
 - `styles.css`: Layout, colors, and responsive styles
 - `assets/projects/`: Place permanent project images and videos here
 
@@ -17,15 +17,29 @@ This is a first draft of a personal portfolio website. It is currently a static 
 - Add a profile photo or project screenshots
 - Convert the site to Next.js or Vite if the project grows
 
-## Project Media
+## Project Detail Content
 
-The public detail page only displays media that is committed with the site. Visitors cannot upload files.
+The public detail page only displays text and media that is committed with the site. Visitors cannot upload files.
 
-For permanent media:
+To add permanent detail content:
 
 - Add files under `assets/projects/`
-- Reference them from `project-detail.js`
+- Reference them from a project's `content` array in `project-detail.js`
 - Commit and push the assets with the site
+
+Example:
+
+```js
+content: [
+  { type: "text", text: "What I built and why it matters." },
+  {
+    type: "image",
+    src: "./assets/projects/example.png",
+    alt: "Project screenshot",
+  },
+  { type: "text", text: "What the result shows." },
+],
+```
 
 ## Custom Domain
 
