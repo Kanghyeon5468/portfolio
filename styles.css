@@ -280,9 +280,8 @@ h3 {
 
 .project-thumb.game-of-life {
   background:
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0 1px, transparent 1px 24px),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0 1px, transparent 1px 24px),
-    linear-gradient(135deg, #15191f, #315c99);
+    linear-gradient(135deg, #15191f, #315c99),
+    url("./Users/kanghyeon/Desktop/Project/webpage/assets/projects/image copy 2.png") center / cover;
 }
 
 .project-thumb.hazard-detector {
