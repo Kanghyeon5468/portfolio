@@ -268,11 +268,8 @@ h3 {
 
 .project-thumb.ml-trading {
   background:
-    repeating-linear-gradient(0deg, transparent 0 20px, rgba(255, 255, 255, 0.18) 20px 21px),
-    linear-gradient(135deg, rgba(21, 25, 31, 0.18) 1px, transparent 1px),
-    linear-gradient(45deg, rgba(255, 255, 255, 0.28) 12%, transparent 12% 24%, rgba(255, 255, 255, 0.18) 24% 36%, transparent 36%),
-    linear-gradient(135deg, #0d766e, #315c99 58%, #b58a2a);
-  background-size: auto, 22px 22px, auto, auto;
+    linear-gradient(rgba(21, 25, 31, 0.08), rgba(21, 25, 31, 0.08)),
+    url("./assets/projects/image.png") center / cover;
 }
 
 .project-thumb.portfolio-optimisation {

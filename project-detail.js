@@ -17,6 +17,7 @@ const projects = {
       "Inflation Data",
       "FX Rates",
       "Backtesting",
+      "machine learning"
     ],
     overview: [
       "This project separates the trading workflow into training, live execution, and daily dataset maintenance.",
