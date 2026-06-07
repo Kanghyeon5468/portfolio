@@ -301,8 +301,7 @@ h3 {
 
 .project-thumb.ai-travel {
   background:
-    radial-gradient(circle at 24% 24%, rgba(255, 255, 255, 0.48) 0 10%, transparent 11%),
-    linear-gradient(135deg, #315c99, #0d766e 68%, #b58a2a);
+    url("./assets/projects/travel.png") center / cover;
 }
 
 .project-thumb.blackswan {
