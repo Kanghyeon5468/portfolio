@@ -280,7 +280,7 @@ h3 {
 
 .project-thumb.game-of-life {
   background:
-    linear-gradient(135deg, #15191f, #315c99),
+    /* linear-gradient(135deg, #15191f, #315c99), */
     url("./assets/projects/image copy 2.png") center / cover;
 }
 
