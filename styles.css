@@ -275,7 +275,7 @@ h3 {
 .project-thumb.portfolio-optimisation {
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.18) 12%, transparent 12% 22%, rgba(255, 255, 255, 0.22) 22% 32%, transparent 32%),
-    linear-gradient(135deg, #243241, #315c99 54%, #0d766e);
+    url("./assets/projects/image.copy..png") center / cover;
 }
 
 .project-thumb.game-of-life {
