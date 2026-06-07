@@ -33,6 +33,13 @@ const projects = {
       "Supports full dataset rebuilds and incremental after-market updates.",
       "Designed so intraday trading does not retrain unexpectedly during a session.",
     ],
+    media: [
+      {
+        src: "./assets/projects/output.png",
+        label: "Live trading vs buy and hold return chart",
+        type: "image/png",
+      },
+    ],
   },
   "portfolio-optimisation": {
     title: "Real-time Portfolio Optimisation",
@@ -255,7 +262,6 @@ project.highlights.forEach((text) => {
   highlights.append(item);
 });
 
-const upload = document.getElementById("media-upload");
 const mediaGrid = document.getElementById("media-grid");
 
 function renderMediaItem(source, label, type = "") {
@@ -279,18 +285,18 @@ function renderMediaItem(source, label, type = "") {
 }
 
 function renderProjectMedia() {
-  (project.media || []).forEach((item) => {
+  const media = project.media || [];
+  if (!media.length) {
+    const empty = document.createElement("p");
+    empty.className = "media-empty";
+    empty.textContent = "Media will be added soon.";
+    mediaGrid.append(empty);
+    return;
+  }
+
+  media.forEach((item) => {
     renderMediaItem(item.src, item.label, item.type);
   });
 }
 
 renderProjectMedia();
-
-upload.addEventListener("change", () => {
-  mediaGrid.innerHTML = "";
-  renderProjectMedia();
-  Array.from(upload.files).forEach((file) => {
-    const url = URL.createObjectURL(file);
-    renderMediaItem(url, file.name, file.type);
-  });
-});

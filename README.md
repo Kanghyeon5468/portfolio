@@ -6,7 +6,7 @@ This is a first draft of a personal portfolio website. It is currently a static 
 
 - `index.html`: Portfolio sections and core content
 - `project.html`: Shared project detail page
-- `project-detail.js`: Project detail data and media preview logic
+- `project-detail.js`: Project detail data and permanent media references
 - `styles.css`: Layout, colors, and responsive styles
 - `assets/projects/`: Place permanent project images and videos here
 
@@ -19,7 +19,7 @@ This is a first draft of a personal portfolio website. It is currently a static 
 
 ## Project Media
 
-The detail page can preview selected images and videos in the browser. This is useful while editing, but selected files are not permanently uploaded by a static HTML site.
+The public detail page only displays media that is committed with the site. Visitors cannot upload files.
 
 For permanent media:
 

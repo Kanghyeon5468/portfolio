@@ -527,32 +527,21 @@ h3 {
   color: var(--muted);
 }
 
-.upload-box {
-  display: grid;
-  min-height: 116px;
-  place-items: center;
-  margin-top: 20px;
-  border: 1px dashed var(--accent);
-  border-radius: 8px;
-  color: var(--accent-strong);
-  font-weight: 850;
-  background: rgba(13, 118, 110, 0.06);
-  cursor: pointer;
-}
-
-.upload-box input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-}
-
 .media-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
   margin-top: 18px;
+}
+
+.media-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  background: var(--surface);
 }
 
 .media-card {
