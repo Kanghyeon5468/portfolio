@@ -277,10 +277,7 @@ function renderMediaItem(source, label, type = "") {
     preview.controls = true;
   }
 
-  const caption = document.createElement("figcaption");
-  caption.textContent = label;
-
-  card.append(preview, caption);
+  card.append(preview);
   mediaGrid.append(card);
 }
 
