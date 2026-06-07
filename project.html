@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Detail | Kang Hyeon</title>
+    <meta name="description" content="Portfolio project detail page." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html#top" aria-label="Go to home">
+        <span class="brand-mark">KH</span>
+        <span>Kang Hyeon</span>
+      </a>
+      <nav class="nav" aria-label="Project navigation">
+        <a href="./index.html#projects">Projects</a>
+        <a href="./index.html#about">About</a>
+        <a href="./index.html#highlights">Highlights</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="detail-shell">
+      <a class="back-link" href="./index.html#projects">Back to projects</a>
+
+      <section class="detail-hero">
+        <div>
+          <p class="eyebrow" id="project-category">Project</p>
+          <h1 id="project-title">Project detail</h1>
+          <p class="hero-summary" id="project-summary"></p>
+          <div class="detail-actions" id="project-actions"></div>
+        </div>
+        <div class="detail-thumb" id="project-thumb" aria-hidden="true"></div>
+      </section>
+
+      <section class="detail-grid">
+        <article class="detail-panel">
+          <p class="eyebrow">Overview</p>
+          <div class="rich-copy" id="project-overview"></div>
+        </article>
+
+        <article class="detail-panel">
+          <p class="eyebrow">Stack</p>
+          <ul class="tag-list detail-tags" id="project-stack"></ul>
+        </article>
+
+        <article class="detail-panel">
+          <p class="eyebrow">Highlights</p>
+          <ul class="detail-list" id="project-highlights"></ul>
+        </article>
+
+        <article class="detail-panel">
+          <p class="eyebrow">Media</p>
+          <p class="media-note">
+            Add screenshots, photos, or videos here for preview while editing.
+            For the deployed site, place files in `assets/projects/` and connect
+            them in the project data.
+          </p>
+          <label class="upload-box" for="media-upload">
+            <span>Choose images or videos</span>
+            <input id="media-upload" type="file" accept="image/*,video/*" multiple />
+          </label>
+          <div class="media-grid" id="media-grid"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="./project-detail.js"></script>
+  </body>
+</html>

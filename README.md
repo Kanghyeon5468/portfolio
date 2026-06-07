@@ -5,7 +5,10 @@ This is a first draft of a personal portfolio website. It is currently a static 
 ## Structure
 
 - `index.html`: Portfolio sections and core content
+- `project.html`: Shared project detail page
+- `project-detail.js`: Project detail data and media preview logic
 - `styles.css`: Layout, colors, and responsive styles
+- `assets/projects/`: Place permanent project images and videos here
 
 ## Next Steps
 
@@ -13,6 +16,16 @@ This is a first draft of a personal portfolio website. It is currently a static 
 - Add GitHub links and detail pages for each project
 - Add a profile photo or project screenshots
 - Convert the site to Next.js or Vite if the project grows
+
+## Project Media
+
+The detail page can preview selected images and videos in the browser. This is useful while editing, but selected files are not permanently uploaded by a static HTML site.
+
+For permanent media:
+
+- Add files under `assets/projects/`
+- Reference them from `project-detail.js`
+- Commit and push the assets with the site
 
 ## Custom Domain
 
