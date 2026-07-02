@@ -293,7 +293,7 @@ const params = new URLSearchParams(window.location.search);
 const projectId = params.get("project") || "ml-trading";
 const project = projects[projectId] || projects["ml-trading"];
 
-document.title = `${project.title} | Kanghyeon`;
+document.title = `${project.title} | Daniel`;
 document.getElementById("project-category").textContent = project.category;
 document.getElementById("project-title").textContent = project.title;
 document.getElementById("project-summary").textContent = project.summary;

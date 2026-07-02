@@ -10,6 +10,18 @@
   --shadow: 0 18px 50px rgba(21, 25, 31, 0.09);
 }
 
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #eef3f7;
+  --muted: #a6b2c1;
+  --line: #2d3745;
+  --surface: #101419;
+  --panel: #171d24;
+  --accent: #35c7ba;
+  --accent-strong: #71ddd4;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -43,7 +55,7 @@ a {
   min-height: 60px;
   padding: 0 40px;
   border-bottom: 1px solid var(--line);
-  background: rgba(246, 248, 251, 0.95);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
   backdrop-filter: blur(12px);
 }
 
@@ -88,12 +100,23 @@ a {
 }
 
 .theme-toggle {
-  background: none;
-  border: none;
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
   font-size: 1.2rem;
   cursor: pointer;
-  color: var(--muted);
-  padding: 4px;
+  color: var(--ink);
+  padding: 0;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .location-time {
@@ -276,6 +299,11 @@ p {
   aspect-ratio: 1;
 }
 
+:root[data-theme="dark"] .gallery-item,
+:root[data-theme="dark"] .project-thumb {
+  filter: saturate(0.9) brightness(0.82);
+}
+
 /* Sections */
 .section {
   padding: 80px 40px;
@@ -339,7 +367,7 @@ p {
 .timestamp {
   margin-top: 12px;
   font-size: 0.8rem;
-  color: #999;
+  color: var(--muted);
 }
 
 /* Projects Section */
