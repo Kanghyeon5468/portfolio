@@ -1,4 +1,58 @@
 const projects = {
+  "property-matching-ai": {
+    title: "Property Matching AI",
+    category: "Cloud AI App / PropTech",
+    thumb: "property-matching-ai",
+    summary:
+      "A Cloudflare-based rental matching MVP that turns tenant search intent into ranked property matches with account-scoped persistence.",
+    links: [
+      {
+        label: "Live Preview",
+        href: "https://d500bd1b.property-matching-ai-pages.pages.dev/",
+      },
+    ],
+    stack: [
+      "Cloudflare Pages",
+      "Cloudflare Workers",
+      "D1",
+      "JavaScript",
+      "Property Market Intel",
+      "OS Names API",
+      "Authentication",
+      "Rules-based Matching",
+    ],
+    overview: [
+      "Property Matching AI is a rental matching MVP with tenant and landlord flows, a static frontend, a Cloudflare Worker API, and D1-backed persistence.",
+      "Tenants describe their location, budget, move-in timing, bedroom count, lifestyle, and preferences. The app searches Property Market Intel listings and filters out unavailable, withdrawn, let-agreed, sold, and removed properties.",
+      "The matching engine scores candidate homes against tenant needs, then explains strengths, concerns, verdicts, and a suggested intro message.",
+      "The app includes email/password authentication, account-scoped tenant and landlord profiles, property intel storage, match history, and a same-origin Pages worker proxy for API calls.",
+    ],
+    highlights: [
+      "Built tenant search and landlord/manual property profile flows.",
+      "Integrated Property Market Intel listing lookup and tenant-driven search.",
+      "Added location resolution with UK postcode/outcode handling, manual fallbacks, and OS Names API support.",
+      "Normalizes enriched listing data including rent, deposit, EPC, council tax, furnishing, features, coordinates, and agent details.",
+      "Uses Cloudflare Pages, Workers, and D1 for a deployable full-stack MVP.",
+    ],
+    content: [
+      {
+        type: "text",
+        text: "The tenant portal captures search intent across budget, area, timing, bedrooms, lifestyle constraints, furnishing, tenancy length, and free-form preferences.",
+      },
+      {
+        type: "text",
+        text: "The Worker API resolves locations, queries Property Market Intel, maps provider responses into a normalized listing model, and filters unavailable properties before ranking.",
+      },
+      {
+        type: "text",
+        text: "Scoring is currently deterministic and rules-based, covering budget fit, bedroom fit, location overlap, distance, preference keyword matches, pets, smoking, furnishing, move-in timing, deposit burden, EPC rating, and metadata completeness.",
+      },
+      {
+        type: "text",
+        text: "Cloudflare D1 stores users, tenant profiles, landlord/property profiles, property intel records, and match history. The architecture leaves an AI enhancement hook ready for an LLM provider later.",
+      },
+    ],
+  },
   "ml-trading": {
     title: "ML Trading",
     category: "Quant / Machine Learning",
