@@ -451,8 +451,10 @@ p {
 }
 
 .project-thumb.blackswan {
-  background: radial-gradient(circle at 72% 32%, rgba(255, 255, 255, 0.3) 0 7%, transparent 8%), radial-gradient(circle at 30% 64%, rgba(181, 138, 42, 0.46) 0 13%, transparent 14%), linear-gradient(135deg, #15191f, #243241 58%, #0d766e);
-  background-size: cover;
+  background-color: #ffffff;
+  background-image: url("./assets/projects/blackswan.png");
+  background-repeat: no-repeat;
+  background-size: contain;
   background-position: center;
 }
 
@@ -463,8 +465,7 @@ p {
 }
 
 .project-thumb.veritas {
-  background: linear-gradient(135deg, rgba(13, 118, 110, 0.8), rgba(49, 92, 153, 0.8)), 
-              repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0.1) 10px, transparent 10px, transparent 20px);
+  background-image: url("./assets/projects/veritas.png");
   background-size: cover;
   background-position: center;
 }
