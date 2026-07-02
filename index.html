@@ -1,75 +1,144 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kang Hyeon | Portfolio</title>
+    <title>Kanghyeon | Computer Science / AI / Robotics</title>
     <meta
       name="description"
-      content="Quant, data, and software projects portfolio."
+      content="AI, robotics, and software systems engineer. Portfolio of applied projects."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Go to home">
-        <span class="brand-mark">KH</span>
-        <span>Kang Hyeon</span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#highlights">Highlights</a>
-        <a href="#contact">Contact</a>
+      <nav class="header-nav">
+        <a class="brand" href="#top" aria-label="Go to home">kanghyeon</a>
+        <ul class="nav-links">
+          <li><a href="#live">live</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#experience">experience</a></li>
+          <li><a href="#education">education</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
       </nav>
+      <div class="header-right">
+        <button class="theme-toggle" aria-label="Toggle theme">◐</button>
+        <span class="location-time">Bristol · BST</span>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Computer Science / AI Systems / Robotics</p>
-          <h1>I build applied AI, robotics, and data systems from idea to working prototype.</h1>
-          <p class="hero-summary">
-            A portfolio of projects spanning machine learning, quantitative
-            finance, robotics, VR interaction, distributed systems, cloud apps,
-            and quantum-inspired optimisation.
+        <div class="hero-content">
+          <div class="section-number">01 · hi, i'm</div>
+          <h1>Kanghyeon<span class="accent-dot">·</span> <span class="hero-subtitle">Builder<span class="accent-dot">·</span></span> Engineer<span class="accent-dot">·</span></h1>
+          
+          <p class="hero-description">
+            I build applied AI systems, robotics, and data solutions. Currently exploring machine learning, 
+            quantitative finance, VR interaction, distributed systems, and cloud applications. 
+            I'm passionate about turning complex problems into working prototypes and optimized solutions.
+            Always learning, always building, always shipping.
           </p>
+          
           <div class="hero-actions">
-            <a class="button primary" href="#projects">View Projects</a>
-            <a class="button secondary" href="#contact">Contact</a>
+            <a href="#projects" class="button primary">↓ projects</a>
+            <a href="#contact" class="button secondary">contact</a>
+          </div>
+
+          <div class="quick-info">
+            <div class="info-block">
+              <p class="info-label">bristol</p>
+              <p class="info-value">Bristol · UK</p>
+            </div>
+            <div class="info-block">
+              <p class="info-label">Stack</p>
+              <p class="info-value">Python, TypeScript, Go, C++</p>
+            </div>
+            <div class="info-block">
+              <p class="info-label">Focus</p>
+              <p class="info-value">AI systems · Robotics · Quant</p>
+            </div>
+            <div class="info-block">
+              <p class="info-label">Now</p>
+              <p class="info-value">Building deployable prototypes</p>
+            </div>
           </div>
         </div>
 
-        <div class="profile-panel" aria-label="Portfolio snapshot">
-          <div class="profile-visual">
-            <span>AI</span>
-            <strong>CS</strong>
-            <span>Robotics</span>
-          </div>
-          <dl class="quick-facts">
-            <div>
-              <dt>Focus</dt>
-              <dd>AI systems, robotics, quant tools</dd>
-            </div>
-            <div>
-              <dt>Stack</dt>
-              <dd>Python, TypeScript, Go, C++, cloud tooling</dd>
-            </div>
-            <div>
-              <dt>Now</dt>
-              <dd>Building project case studies and deployable prototypes</dd>
-            </div>
-          </dl>
+        <div class="hero-gallery">
+          <img src="./assets/projects/image.png" alt="Project showcase" class="gallery-item">
+          <img src="./assets/projects/image copy.png" alt="Project showcase" class="gallery-item">
+          <img src="./assets/projects/game-of-life.png" alt="Project showcase" class="gallery-item">
+          <img src="./assets/projects/industrial.png" alt="Project showcase" class="gallery-item">
+          <img src="./assets/projects/vr.png" alt="Project showcase" class="gallery-item">
+          <img src="./assets/projects/robotic.png" alt="Project showcase" class="gallery-item">
+        </div>
+      </section>
+
+      <section id="live" class="section">
+        <div class="section-header">
+          <div class="section-number">02 · live wall</div>
+          <h2>What I'm up to, right now.</h2>
+          <p>A collection of current projects, learning, and work in progress.</p>
+        </div>
+        
+        <div class="live-wall">
+          <article class="live-item">
+            <div class="live-badge">Recent Projects</div>
+            <h3>ML Trading System</h3>
+            <p>Building a SPY 5-minute trading system with GBDT models and Alpaca integration.</p>
+            <p class="timestamp">Updated 2 days ago</p>
+          </article>
+          
+          <article class="live-item">
+            <div class="live-badge">Learning</div>
+            <h3>Quantum Finance</h3>
+            <p>Exploring quantum Monte Carlo methods for portfolio optimization.</p>
+            <p class="timestamp">Active</p>
+          </article>
+          
+          <article class="live-item">
+            <div class="live-badge">Open Source</div>
+            <h3>Contributing to PyTorch</h3>
+            <p>Working on distributed systems improvements and performance optimization.</p>
+            <p class="timestamp">Ongoing</p>
+          </article>
         </div>
       </section>
 
       <section id="projects" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2>Projects</h2>
+        <div class="section-header">
+          <div class="section-number">03 · projects</div>
+          <h2>Selected work</h2>
+          <p>A collection of AI systems, robotics, and software projects I've built.</p>
         </div>
 
         <div class="project-grid">
+          <article class="project-card">
+            <div class="project-thumb veritas"></div>
+            <div class="project-body">
+              <h3>Veritas</h3>
+              <p>
+                Federated fraud intelligence for UK banking. A cross-bank fraud-detection model trained across multiple banks' records using federated learning to catch scam campaigns in hours instead of days without sharing customer data.
+              </p>
+              <ul class="tag-list" aria-label="Tech stack">
+                <li>Federated Learning</li>
+                <li>Python</li>
+                <li>GNN</li>
+                <li>Banking</li>
+                <li>Differential Privacy</li>
+                <li>NextJS</li>
+              </ul>
+              <a
+                href="./project.html?project=veritas"
+                aria-label="Open Veritas on GitHub"
+              >
+                Details
+              </a>
+            </div>
+          </article>
+
           <article class="project-card">
             <div class="project-thumb ml-trading"></div>
             <div class="project-body">
@@ -298,70 +367,65 @@
         </div>
       </section>
 
-      <section id="about" class="section split-section">
-        <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2>I move quickly between research ideas and working systems.</h2>
+      <section id="experience" class="section">
+        <div class="section-header">
+          <div class="section-number">03 · experience</div>
+          <h2>Work & projects</h2>
         </div>
-        <div class="body-copy">
-          <p>
-            I like turning ideas into datasets, experiment code, prototypes,
-            validation results, and tools that can be maintained over time. My
-            work crosses AI applications, robotics control, cloud agents,
-            distributed systems, and financial modelling.
-          </p>
-          <div class="skill-columns">
-            <div>
-              <h3>Core</h3>
-              <p>Python, TypeScript, Go, C++, machine learning, robotics</p>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-year">2025</span>
+            <div class="timeline-content">
+              <h3>EncodeAI Wormhole Bounty Winner</h3>
+              <p>Built a quantum-enhanced DeFi portfolio optimization system with real-time data feeds and explainable AI models.</p>
             </div>
-            <div>
-              <h3>Tools</h3>
-              <p>React, Cloudflare Workers, OpenCV, Roboflow, Git, AWS</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2024</span>
+            <div class="timeline-content">
+              <h3>Top-Ranked Systems Project</h3>
+              <p>Implemented parallel and distributed Conway's Game of Life in Go with halo exchange and performance analysis.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">2024-25</span>
+            <div class="timeline-content">
+              <h3>Industrial AI Safety Platform</h3>
+              <p>Developed computer vision and IoT systems for autonomous hazard detection in industrial environments.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="highlights" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Highlights</p>
-          <h2>Selected milestones</h2>
+      <section id="education" class="section">
+        <div class="section-header">
+          <div class="section-number">04 · education</div>
+          <h2>Learning & development</h2>
         </div>
-        <ol class="timeline">
-          <li>
-            <span class="time">2025</span>
-            <div>
-              <h3>EncodeAI Wormhole bounty winner</h3>
-              <p>Built a quantum-enhanced DeFi portfolio optimisation system with real-time data and explainable AI.</p>
-            </div>
-          </li>
-          <li>
-            <span class="time">2024</span>
-            <div>
-              <h3>Top-ranked Game of Life systems project</h3>
-              <p>Compared parallel and distributed Go implementations with halo exchange and performance analysis.</p>
-            </div>
-          </li>
-          <li>
-            <span class="time">2024-25</span>
-            <div>
-              <h3>Industrial AI safety platform</h3>
-              <p>Worked on u3Core, a computer vision and IoT platform for fire, smoke, and oil leak detection.</p>
-            </div>
-          </li>
-        </ol>
+        
+        <div class="education-grid">
+          <div class="education-item">
+            <h3>Computer Science</h3>
+            <p class="education-detail">Focus: AI systems, distributed computing, robotics</p>
+          </div>
+          <div class="education-item">
+            <h3>Skills</h3>
+            <p class="education-detail">Python, TypeScript, Go, C++ · ML, robotics, cloud systems</p>
+          </div>
+        </div>
       </section>
 
       <section id="contact" class="section contact-section">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Interested in the projects or experiments behind this work?</h2>
+        <div class="section-header">
+          <div class="section-number">05 · contact</div>
+          <h2>Let's work together</h2>
+          <p>Interested in projects, collaborations, or discussing ideas?</p>
         </div>
         <div class="contact-links">
-          <a href="mailto:your.email@example.com">Email</a>
-          <a href="https://github.com/Kanghyeon5468" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:kanghyeon@example.com" class="contact-link">Email</a>
+          <a href="https://github.com/Kanghyeon5468" target="_blank" rel="noreferrer" class="contact-link">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" class="contact-link">LinkedIn</a>
         </div>
       </section>
     </main>

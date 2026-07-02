@@ -232,13 +232,68 @@ const projects = {
       "Combined notebooks, challenge documentation, and auto-graded attack workflows.",
     ],
   },
+  "veritas": {
+    title: "Veritas",
+    category: "Federated Learning / Banking",
+    thumb: "veritas",
+    summary:
+      "Federated fraud intelligence for UK banking—a cross-bank fraud detection model trained across multiple banks' records using federated learning to catch scam campaigns in hours.",
+    links: [
+      { label: "GitHub", href: "https://github.com/Kanghyeon5468/Veritas" },
+      { label: "Project Deck", href: "../Veritas/docs/" },
+    ],
+    stack: [
+      "Federated Learning",
+      "Python",
+      "Graph Neural Networks",
+      "Differential Privacy",
+      "Banking",
+      "NextJS",
+      "TypeScript",
+      "EdDSA",
+      "Zero-Knowledge Proofs",
+    ],
+    overview: [
+      "Veritas is a federated fraud detection platform designed to help multiple UK banks collaborate on detecting cross-bank scam and mule campaigns without sharing customer records.",
+      "The system trains a shared fraud-detection model across many banks' data using federated learning, allowing each bank to keep sensitive data on-premises while benefiting from aggregated intelligence.",
+      "The tech stack includes a Python federated-learning engine with multiple model architectures (logistic regression, MLP, GRU, GraphSAGE GNN, embeddings, federated GBDT + stacked ensemble), secure aggregation, differential privacy (RDP accountant), and VSA zero-knowledge proofs.",
+      "A tier-2 control plane manages enrolment, authentication (EdDSA JWTs), federation rounds, model registry, node attestation, and signed tamper-evident transparency logs.",
+      "Bank nodes run identity, attestation, feature-map connectors, and federation clients. A Next.js demo console visualizes the live siloed-vs-federated race and includes an 'Under the hood' gallery showing real model visualizations.",
+    ],
+    highlights: [
+      "Federated learning across multiple banks without sharing customer data.",
+      "Multiple model architectures (logistic, MLP, GRU, GraphSAGE GNN, ensembles).",
+      "Differential privacy and secure aggregation for data protection.",
+      "Zero-knowledge proofs and tamper-evident transparency logs.",
+      "Live demo console with model visualizations.",
+      "Production-ready node runtime and control-plane infrastructure.",
+    ],
+    content: [
+      {
+        type: "text",
+        text: "Veritas solves the cross-bank fraud detection problem by allowing multiple banks to train a shared model on their local data without ever transmitting customer records. Each bank runs a secure node that participates in federation rounds, sending only model gradients (not raw data) to the control plane.",
+      },
+      {
+        type: "text",
+        text: "The federated engine supports multiple architectures: standard logistic regression and MLP for baseline comparison, GRU recurrent models for temporal fraud patterns, GraphSAGE for graph-based account-network analysis, and stacked ensembles that combine multiple models for robust predictions.",
+      },
+      {
+        type: "text",
+        text: "Differential privacy is baked in via RDP (Rényi differential privacy) accounting, allowing banks to guarantee privacy budgets. Secure aggregation ensures that the control plane never sees individual gradients. VSA (Verifiable Secret Aggregation) with zero-knowledge proofs enables auditable, tamper-evident federation.",
+      },
+      {
+        type: "text",
+        text: "The demo includes a live race view showing how the federated model out-detects siloed models, and an 'Under the hood' gallery of precomputed real model visualizations. Bank nodes can be spun up locally or deployed to production with full governance, attestation, and transparency log support.",
+      },
+    ],
+  },
 };
 
 const params = new URLSearchParams(window.location.search);
 const projectId = params.get("project") || "ml-trading";
 const project = projects[projectId] || projects["ml-trading"];
 
-document.title = `${project.title} | Kang Hyeon`;
+document.title = `${project.title} | Kanghyeon`;
 document.getElementById("project-category").textContent = project.category;
 document.getElementById("project-title").textContent = project.title;
 document.getElementById("project-summary").textContent = project.summary;
