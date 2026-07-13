@@ -459,7 +459,7 @@ p {
 }
 
 .project-thumb.ionq {
-  background: radial-gradient(circle at 36% 42%, rgba(255, 255, 255, 0.46) 0 8%, transparent 9%), radial-gradient(circle at 68% 32%, rgba(255, 255, 255, 0.3) 0 6%, transparent 7%), linear-gradient(135deg, #315c99, #243241 58%, #0d766e);
+  background-image: url("./assets/projects/ionq.png");
   background-size: cover;
   background-position: center;
 }
