@@ -53,6 +53,83 @@ const projects = {
       },
     ],
   },
+  lifo: {
+    title: "Lifo",
+    category: "Learning Technology / Mobile & Web",
+    thumb: "lifo",
+    summary:
+      "A cross-platform revision app that turns lecture material into structured courses, short practice sessions, and a personalised review loop.",
+    links: [
+      { label: "GitHub", href: "https://github.com/TumCucTom/lifo" },
+    ],
+    stack: [
+      "React Native",
+      "TypeScript",
+      "Firebase Authentication",
+      "Cloud Firestore",
+      "Cloud Storage",
+      "Firebase Cloud Functions",
+      "AI-assisted course generation",
+      "FSRS spaced repetition",
+      "iOS · Android · Web",
+    ],
+    overview: [
+      "Lifo is a study and revision app for university students. Students can start with lecture files or a typed module/topic and turn that material into small, structured courses with lessons and quizzes.",
+      "The product is designed around retrieval practice: students answer questions in short lessons, revisit due material with spaced repetition, and use progress insights to identify topics that need more attention.",
+      "Lifo is built with React Native for iOS and Android and also has a browser build for studying on a laptop. Firebase provides authentication, data storage, file storage, and server-side course generation.",
+      "The app is in active development. Course sharing, account privacy controls, generation consent and quotas, and production launch setup are part of the current product work.",
+    ],
+    highlights: [
+      "Generate courses from typed topics or uploaded lecture files, with per-account usage quotas and an explicit AI consent flow.",
+      "Use short lessons, quizzes, spaced-repetition reviews, first-try accuracy, due-question counts, weak-topic suggestions, and recall-by-file insights.",
+      "Support study habits with daily goals, quests, progress rewards, friends, and weekly leaderboards, including opt-in leagues around shared courses.",
+      "Let students share course content with coursemates while keeping files, personal progress, streaks, exam dates, and account details out of the shared course.",
+      "Keep AI provider credentials and generation logic on Firebase Cloud Functions; provide privacy settings, data export, and account deletion.",
+      "Ship a production web app alongside the iOS and Android apps, with a browser walkthrough build for end-to-end testing.",
+    ],
+    content: [
+      {
+        type: "heading",
+        text: "From lecture material to a study plan",
+      },
+      {
+        type: "text",
+        text: "Students can create a course from a typed topic or upload notes and lecture files. The generation flow is guarded by a one-time consent step, server-enforced monthly quotas, and daily cost budgets. Courses made from source files retain page references so questions can point students back to where material came from.",
+      },
+      {
+        type: "heading",
+        text: "Practice that adapts over time",
+      },
+      {
+        type: "text",
+        text: "Lessons are built for active recall rather than passive reading. Wrong answers return later in the session, while spaced-repetition scheduling brings questions back when they are due. The Progress area turns that activity into learned/due/not-seen counts, first-try accuracy, weak-topic review, per-file recall, and a four-week study calendar.",
+      },
+      {
+        type: "heading",
+        text: "Study together, with clear boundaries",
+      },
+      {
+        type: "text",
+        text: "A student can create a share code for a course and invite classmates to join their own copy. Shared course content does not include the original files, study progress, streak, exam date, or personal account details. Each share code can also host a weekly course league, while leaderboard privacy controls let students hide their activity.",
+      },
+      {
+        type: "heading",
+        text: "A privacy-conscious cross-platform foundation",
+      },
+      {
+        type: "text",
+        text: "The mobile app and web app use Firebase for accounts and study data, with Cloud Functions handling AI generation and sensitive server-side operations. Anonymous analytics are opt-in and limited to a typed event catalogue; students can manage privacy settings, export their data, or request account deletion.",
+      },
+      {
+        type: "heading",
+        text: "Current focus",
+      },
+      {
+        type: "text",
+        text: "The product is moving through its launch-readiness work: production Firebase configuration and deployment, final store product IDs, legal review, and device-level checks for native flows. The browser build supports end-to-end walkthroughs, while native-only behaviour still needs real-device validation.",
+      },
+    ],
+  },
   "ml-trading": {
     title: "ML Trading",
     category: "Quant / Machine Learning",
@@ -389,6 +466,13 @@ function appendTextBlock(text) {
   projectContent.append(paragraph);
 }
 
+function appendHeadingBlock(text) {
+  const heading = document.createElement("h2");
+  heading.className = "content-heading";
+  heading.textContent = text;
+  projectContent.append(heading);
+}
+
 function appendMediaBlock(source, label, type = "") {
   const card = document.createElement("figure");
   card.className = "content-media";
@@ -425,6 +509,11 @@ function renderProjectContent() {
   }
 
   content.forEach((item) => {
+    if (item.type === "heading") {
+      appendHeadingBlock(item.text);
+      return;
+    }
+
     if (item.type === "image" || item.type === "video") {
       appendMediaBlock(item.src, item.alt || item.label || project.title, item.mediaType || item.type);
       return;

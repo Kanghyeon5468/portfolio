@@ -15,8 +15,9 @@
       <nav class="header-nav">
         <a class="brand" href="#top" aria-label="Go to home">daniel</a>
         <ul class="nav-links">
-          <li><a href="#live">live</a></li>
+          <li><a href="#ongoing">ongoing</a></li>
           <li><a href="#projects">projects</a></li>
+          <li><a href="#map">map</a></li>
           <li><a href="#experience">experience</a></li>
           <li><a href="#education">education</a></li>
           <li><a href="#contact">contact</a></li>
@@ -82,34 +83,61 @@
         </div>
       </section>
 
-      <section id="live" class="section">
+      <section id="ongoing" class="section">
         <div class="section-header">
-          <div class="section-number">02 · live wall</div>
-          <h2>What I'm up to, right now.</h2>
-          <p>A collection of current projects, learning, and work in progress.</p>
+          <div class="section-number">02 · ongoing projects</div>
+          <h2>Building tools for better learning.</h2>
+          <p>Projects in active development, with a closer look at what is being built and why.</p>
         </div>
-        
-        <div class="live-wall">
-          <article class="live-item">
-            <div class="live-badge">Recent Projects</div>
-            <h3>ML Trading System</h3>
-            <p>Building a SPY 5-minute trading system with GBDT models and Alpaca integration.</p>
-            <p class="timestamp">Updated 2 days ago</p>
-          </article>
-          
-          <article class="live-item">
-            <div class="live-badge">Learning</div>
-            <h3>Quantum Finance</h3>
-            <p>Exploring quantum Monte Carlo methods for portfolio optimization.</p>
-            <p class="timestamp">Active</p>
-          </article>
-          
-          <article class="live-item">
-            <div class="live-badge">Open Source</div>
-            <h3>Contributing to PyTorch</h3>
-            <p>Working on distributed systems improvements and performance optimization.</p>
-            <p class="timestamp">Ongoing</p>
-          </article>
+
+        <article class="ongoing-card">
+          <div class="ongoing-main">
+            <div class="ongoing-brandmark" aria-hidden="true">
+              <span class="lifo-wordmark">lifo</span>
+              <span class="lifo-caption">learn it. keep it.</span>
+            </div>
+            <div class="ongoing-project-copy">
+              <div class="live-badge">Active development · iOS, Android & web</div>
+              <h3>Lifo — a revision app built around active recall</h3>
+              <p>
+                Lifo turns lecture notes or a topic prompt into bite-sized courses and quizzes, then helps
+                university students return to the material through spaced review, progress insights, and
+                study goals.
+              </p>
+              <a class="button secondary" href="./project.html?project=lifo">Explore Lifo</a>
+            </div>
+          </div>
+
+          <div class="ongoing-capabilities">
+            <article class="ongoing-capability">
+              <span class="capability-index">01</span>
+              <div>
+                <h4>Make a course from class material</h4>
+                <p>Generate structured lessons from typed topics or uploaded lecture files, with source references for notes-based questions.</p>
+              </div>
+            </article>
+            <article class="ongoing-capability">
+              <span class="capability-index">02</span>
+              <div>
+                <h4>Practise, then revisit what needs work</h4>
+                <p>Short quizzes, spaced repetition, due-question reviews, weak-topic sessions, and recall insights turn study into a repeatable loop.</p>
+              </div>
+            </article>
+            <article class="ongoing-capability">
+              <span class="capability-index">03</span>
+              <div>
+                <h4>Keep motivation social and optional</h4>
+                <p>Daily goals, quests, streaks, friends, and course leagues add momentum; course sharing is opt-in and keeps personal progress private.</p>
+              </div>
+            </article>
+            <article class="ongoing-capability">
+              <span class="capability-index">04</span>
+              <div>
+                <h4>Build with privacy and cost controls</h4>
+                <p>Firebase services handle accounts and study data, while server-side AI quotas, consent, privacy settings, and data export/deletion shape the product.</p>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -121,6 +149,25 @@
         </div>
 
         <div class="project-grid">
+          <article class="project-card">
+            <div class="project-thumb lifo"></div>
+            <div class="project-body">
+              <h3>Lifo</h3>
+              <p>
+                A cross-platform revision app that turns lecture notes and topics into courses, supports
+                spaced practice, and helps students study together without sharing personal progress.
+              </p>
+              <ul class="tag-list" aria-label="Tech stack">
+                <li>React Native</li>
+                <li>TypeScript</li>
+                <li>Firebase</li>
+                <li>Cloud Functions</li>
+                <li>iOS · Android · Web</li>
+              </ul>
+              <a href="./project.html?project=lifo" aria-label="Open Lifo project details">Details</a>
+            </div>
+          </article>
+
           <article class="project-card">
             <div class="project-thumb property-matching-ai"></div>
             <div class="project-body">
@@ -399,9 +446,62 @@
         </div>
       </section>
 
+      <section id="map" class="section map-section">
+        <div class="section-header">
+          <div class="map-eyebrow">04 · portfolio map</div>
+          <h2>Things I've built, mapped in 3D.</h2>
+          <p>
+            Explore projects, milestones, and the tools behind them. Nearby points share a project or
+            theme; this is a curated visual map, not a UMAP embedding.
+          </p>
+        </div>
+
+        <div class="map-type-filters" role="group" aria-label="Filter map by item type">
+          <button class="map-type-filter is-active" type="button" data-map-type="all" aria-pressed="true">All</button>
+          <button class="map-type-filter is-active" type="button" data-map-type="repos" aria-pressed="true">Repos</button>
+          <button class="map-type-filter is-active" type="button" data-map-type="projects" aria-pressed="true">Projects</button>
+          <button class="map-type-filter is-active" type="button" data-map-type="achievements" aria-pressed="true">Achievements</button>
+          <button class="map-type-filter is-active" type="button" data-map-type="experiences" aria-pressed="true">Experiences</button>
+          <button class="map-type-filter is-active" type="button" data-map-type="timelines" aria-pressed="true">Timelines</button>
+          <button class="map-type-filter is-active" type="button" data-map-type="techs" aria-pressed="true">Techs</button>
+        </div>
+
+        <div class="map-workspace">
+          <div class="map-canvas-frame">
+            <canvas
+              id="portfolio-map-canvas"
+              class="portfolio-map-canvas"
+              tabindex="0"
+              role="img"
+              aria-label="Interactive 3D-style map of portfolio projects and technologies. Drag to rotate and use the scroll wheel to zoom."
+            ></canvas>
+            <div class="map-instructions" aria-hidden="true">drag to rotate · scroll to zoom · hover to inspect · click to open</div>
+            <div class="map-tooltip" id="map-tooltip" role="status" hidden></div>
+          </div>
+
+          <aside class="map-sidebar" aria-label="Map filters and selection">
+            <div class="map-sidebar-heading">
+              <span>Clusters</span>
+              <span id="map-cluster-total">0</span>
+            </div>
+            <div class="map-select-actions">
+              <button type="button" id="map-select-all">select all</button>
+              <button type="button" id="map-select-none">select none</button>
+            </div>
+            <div class="map-cluster-list" id="map-cluster-list"></div>
+            <div class="map-count" id="map-count" aria-live="polite"></div>
+            <div class="map-selection" id="map-selection" aria-live="polite">
+              <span class="map-selection-label">Selected point</span>
+              <strong>Hover a point to explore</strong>
+              <p>Click a project or technology point to open its project details.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
       <section id="experience" class="section">
         <div class="section-header">
-          <div class="section-number">03 · experience</div>
+          <div class="section-number">05 · experience</div>
           <h2>Work & projects</h2>
         </div>
         
@@ -432,7 +532,7 @@
 
       <section id="education" class="section">
         <div class="section-header">
-          <div class="section-number">04 · education</div>
+          <div class="section-number">06 · education</div>
           <h2>Learning & development</h2>
         </div>
         
@@ -450,7 +550,7 @@
 
       <section id="contact" class="section contact-section">
         <div class="section-header">
-          <div class="section-number">05 · contact</div>
+          <div class="section-number">07 · contact</div>
           <h2>Let's work together</h2>
           <p>Interested in projects, collaborations, or discussing ideas?</p>
         </div>
@@ -461,6 +561,7 @@
         </div>
       </section>
     </main>
+    <script src="./portfolio-map.js"></script>
     <script src="./theme.js"></script>
   </body>
 </html>
